@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const roadgeek = localFont({
+  src: "../font/Roadgeek2005Mittelschrift-1G6v.ttf",
+  variable: "--font-roadgeek",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +21,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${roadgeek.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col font-sans" style={{ fontFamily: "var(--font-roadgeek)" }}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
