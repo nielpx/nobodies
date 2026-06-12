@@ -4,7 +4,7 @@ import WhitelistForm from "@/components/WhitelistForm";
 export default function WhitelistPage() {
   return (
     <div
-      className="relative min-h-screen w-full bg-cover bg-center"
+      className="relative min-h-screen w-full bg-cover bg-[position:65%_center] md:bg-center"
       style={{ backgroundImage: `url(${bgImage.src})` }}
     >
       <div className="flex w-full items-start justify-start">
