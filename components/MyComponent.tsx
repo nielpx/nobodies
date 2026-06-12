@@ -5,7 +5,7 @@ import rightImage from "../img/IMG_2885_right.png";
 export default function MyComponent() {
   return (
     <div
-      className="flex items-center justify-center min-h-screen w-full bg-cover bg-center px-8 md:px-20 pt-20"
+      className="flex items-center justify-center min-h-screen w-full bg-cover bg-left md:bg-center px-8 md:px-20 pt-20"
       style={{ backgroundImage: `url(${bgImage.src})` }}
     >
       <div className="flex flex-col md:flex-row items-center md:justify-between justify-center gap-16 md:gap-8 w-full">
