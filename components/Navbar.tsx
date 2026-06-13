@@ -1,21 +1,49 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { label: "HOME", href: "#" },
-  { label: "ABOUT", href: "#" },
-  { label: "COLLECTION", href: "#", active: true },
+  { label: "HOME", id: "home" },
+  { label: "COLLECTION", id: "collection" },
 ];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeId, setActiveId] = useState("home");
   const pathname = usePathname();
 
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let best: IntersectionObserverEntry | null = null;
+        for (const entry of entries) {
+          if (entry.isIntersecting && (!best || entry.intersectionRatio > best.intersectionRatio)) {
+            best = entry;
+          }
+        }
+        if (best) setActiveId(best.target.id);
+      },
+      { threshold: [0, 0.25, 0.5, 0.75, 1] }
+    );
+
+    sections.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   if (pathname === "/whitelist") return null;
+
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+    setMobileOpen(false);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 h-20 w-full bg-black px-6 md:px-12">
@@ -24,15 +52,15 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-10 md:flex">
           {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
+            <button
+              key={link.id}
+              onClick={() => scrollTo(link.id)}
               className={`relative pb-1 text-sm font-medium uppercase tracking-wider text-white transition-colors duration-300 hover:text-yellow-500 ${
-                link.active ? "border-b-2 border-yellow-500" : ""
+                activeId === link.id ? "border-b-2 border-yellow-500" : ""
               }`}
             >
               {link.label}
-            </Link>
+            </button>
           ))}
 
           <Link
@@ -61,15 +89,15 @@ export default function Navbar() {
       >
         <div className="flex flex-col items-center gap-6 px-6 pb-8 pt-6">
           {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
+            <button
+              key={link.id}
+              onClick={() => scrollTo(link.id)}
               className={`pb-1 text-sm font-medium uppercase tracking-wider text-white transition-colors duration-300 hover:text-yellow-500 ${
-                link.active ? "border-b-2 border-yellow-500" : ""
+                activeId === link.id ? "border-b-2 border-yellow-500" : ""
               }`}
             >
               {link.label}
-            </Link>
+            </button>
           ))}
 
           <Link
