@@ -17,22 +17,22 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section[id]");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        let best: IntersectionObserverEntry | null = null;
-        for (const entry of entries) {
-          if (entry.isIntersecting && (!best || entry.intersectionRatio > best.intersectionRatio)) {
-            best = entry;
-          }
-        }
-        if (best) setActiveId(best.target.id);
-      },
-      { threshold: [0, 0.25, 0.5, 0.75, 1] }
-    );
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section[id]");
+      const scrollY = window.scrollY + 100;
 
-    sections.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+      let current = "home";
+      sections.forEach((section) => {
+        if (scrollY >= (section as HTMLElement).offsetTop) {
+          current = section.id;
+        }
+      });
+      setActiveId(current);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   if (pathname === "/whitelist") return null;
