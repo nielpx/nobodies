@@ -756,7 +756,7 @@ export default function Home() {
           >
             {/* ROADMAP panel */}
             <div
-              className="bg-[#fdfbf7] border-[2.5px] border-black rounded-l-xl rounded-r-none p-[0.8cqw] shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] flex items-center gap-[0.8cqw]"
+              className="bg-[#f5f0da] border-[2.5px] border-black rounded-l-xl rounded-r-none p-[0.8cqw] shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] flex items-center gap-[0.8cqw]"
               style={{
                 width: "46%",
                 height: "100%",
@@ -1471,7 +1471,7 @@ export default function Home() {
           </div>
 
           {/* ROADMAP */}
-          <div className="bg-[#fdfbf7] border-4 border-black rounded-2xl p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] text-black">
+          <div className="bg-[#f5f0da] border-4 border-black rounded-2xl p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] text-black">
             <div className="flex items-center gap-4 mb-5">
               <img
                 src="/img/roadmap_character.png"
@@ -1705,16 +1705,21 @@ export default function Home() {
 
       <section
         id="collection"
-        className="flex min-h-screen w-full items-center justify-center bg-cover bg-left md:bg-center px-8 md:px-20"
+        className="flex flex-col min-h-screen w-full items-center justify-end bg-cover bg-center px-8 md:px-20 pb-8 md:pb-20"
         style={{ backgroundImage: `url(${bgCollection.src})` }}
       >
-        <div className="flex flex-col md:flex-row items-center md:justify-between justify-center gap-16 md:gap-8 w-full">
-          <img src={leftImage.src} alt="" className="w-4/5 md:w-[28%] h-auto" />
-          <img
-            src={rightImage.src}
-            alt=""
-            className="w-4/5 md:w-[20%] md:-mt-20 h-auto"
-          />
+        <div className="flex flex-col items-center gap-8 w-full">
+          <div className="flex flex-row items-center justify-center gap-8 md:justify-between md:gap-8 w-full">
+            <img src={leftImage.src} alt="" className="w-3/5 md:w-[28%] h-auto" />
+            <img
+              src={rightImage.src}
+              alt=""
+              className="w-2/5 md:w-[20%] md:-mt-20 h-auto"
+            />
+          </div>
+          <button className="w-full md:w-auto bg-[#6d5dac] hover:bg-[#5d4d9c] text-white text-sm md:text-base font-extrabold uppercase tracking-wider py-3 md:py-4 px-8 md:px-16 rounded-full shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-y-[1px] active:shadow-none transition-all cursor-pointer">
+            Explore The Collection
+          </button>
         </div>
       </section>
     </>
