@@ -5,6 +5,7 @@ import bgCollection from "../img/IMG_2886.jpg";
 import bgAbout from "../img/firstimage.jpg";
 import leftImage from "../img/IMG_2885_left.png";
 import rightImage from "../img/IMG_2885_right.png";
+import collectionMobile from "../img/collectionmobile.png";
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
@@ -184,7 +185,7 @@ export default function Home() {
                   <div className="bg-[#fde68a] rounded p-[0.35cqw] flex items-center justify-center shrink-0 mt-[0.05cqw]">
                     <svg
                       className="text-yellow-600"
-                      style={{ width: "2.5cqw", height: "2.5cqw" }}
+                      style={{ width: "2cqw", height: "2cqw" }}
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -216,7 +217,7 @@ export default function Home() {
                   <div className="bg-[#bfdbfe] rounded p-[0.35cqw] flex items-center justify-center shrink-0 mt-[0.05cqw]">
                     <svg
                       className="text-blue-600"
-                      style={{ width: "2.5cqw", height: "2.5cqw" }}
+                      style={{ width: "2cqw", height: "2cqw" }}
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -249,7 +250,7 @@ export default function Home() {
                   <div className="bg-[#a7f3d0] rounded p-[0.35cqw] flex items-center justify-center shrink-0 mt-[0.05cqw]">
                     <svg
                       className="text-green-600"
-                      style={{ width: "2.5cqw", height: "2.5cqw" }}
+                      style={{ width: "2cqw", height: "2cqw" }}
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -281,7 +282,7 @@ export default function Home() {
                   <div className="bg-[#fecdd3] rounded p-[0.35cqw] flex items-center justify-center shrink-0 mt-[0.05cqw]">
                     <svg
                       className="text-rose-600"
-                      style={{ width: "2.5cqw", height: "2.5cqw" }}
+                      style={{ width: "2cqw", height: "2cqw" }}
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -935,12 +936,12 @@ export default function Home() {
                     </h3>
                   </div>
                   <div
-                    className="grid grid-cols-3 grid-rows-2 gap-[0.2cqw]"
+                    className="grid grid-cols-3 grid-rows-2 gap-[0.1cqw]"
                   >
-                    <div className="flex items-start gap-[0.3cqw] p-[0.05cqw]">
+                    <div className="flex items-start gap-[0.15cqw]">
                       <svg
                         className="text-gray-700 shrink-0"
-                        style={{ width: "2.5cqw", height: "2.5cqw" }}
+                        style={{ width: "2cqw", height: "2cqw" }}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -953,18 +954,18 @@ export default function Home() {
                         />
                       </svg>
                       <div className="flex flex-col">
-                        <h4 className="font-extrabold leading-tight text-black" style={{ fontSize: "1.5cqw" }}>
+                        <h4 className="font-extrabold leading-tight text-black" style={{ fontSize: "1.7cqw" }}>
                           Invisible Impact
                         </h4>
-                        <p className="text-gray-600 leading-tight mt-[0.05cqw]" style={{ fontSize: "1.2cqw" }}>
+                        <p className="text-gray-600 leading-tight" style={{ fontSize: "1.4cqw" }}>
                           The greatest contributions often happen unseen.
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-[0.3cqw] p-[0.05cqw]">
+                    <div className="flex items-start gap-[0.15cqw]">
                       <svg
                         className="text-amber-600 shrink-0"
-                        style={{ width: "2.5cqw", height: "2.5cqw" }}
+                        style={{ width: "2cqw", height: "2cqw" }}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -977,18 +978,18 @@ export default function Home() {
                         />
                       </svg>
                       <div className="flex flex-col">
-                        <h4 className="font-extrabold leading-tight text-black" style={{ fontSize: "1.5cqw" }}>
+                        <h4 className="font-extrabold leading-tight text-black" style={{ fontSize: "1.7cqw" }}>
                           Human Made Only
                         </h4>
-                        <p className="text-gray-600 leading-tight mt-[0.05cqw]" style={{ fontSize: "1.2cqw" }}>
+                        <p className="text-gray-600 leading-tight" style={{ fontSize: "1.4cqw" }}>
                           Every card is illustrated by hand. No AI Ever.
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-[0.3cqw] p-[0.05cqw]">
+                    <div className="flex items-start gap-[0.15cqw]">
                       <svg
                         className="text-green-600 shrink-0"
-                        style={{ width: "2.5cqw", height: "2.5cqw" }}
+                        style={{ width: "2cqw", height: "2cqw" }}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -1001,18 +1002,18 @@ export default function Home() {
                         />
                       </svg>
                       <div className="flex flex-col">
-                        <h4 className="font-extrabold leading-tight text-black" style={{ fontSize: "1.5cqw" }}>
+                        <h4 className="font-extrabold leading-tight text-black" style={{ fontSize: "1.7cqw" }}>
                           Community First
                         </h4>
-                        <p className="text-gray-600 leading-tight mt-[0.05cqw]" style={{ fontSize: "1.2cqw" }}>
+                        <p className="text-gray-600 leading-tight" style={{ fontSize: "1.4cqw" }}>
                           The archive belongs to the community.
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-[0.3cqw] p-[0.05cqw]">
+                    <div className="flex items-start gap-[0.15cqw]">
                       <svg
                         className="text-rose-600 shrink-0"
-                        style={{ width: "2.5cqw", height: "2.5cqw" }}
+                        style={{ width: "2cqw", height: "2cqw" }}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -1025,18 +1026,18 @@ export default function Home() {
                         />
                       </svg>
                       <div className="flex flex-col">
-                        <h4 className="font-extrabold leading-tight text-black" style={{ fontSize: "1.5cqw" }}>
+                        <h4 className="font-extrabold leading-tight text-black" style={{ fontSize: "1.7cqw" }}>
                           Meaning Over Status
                         </h4>
-                        <p className="text-gray-600 leading-tight mt-[0.05cqw]" style={{ fontSize: "1.2cqw" }}>
+                        <p className="text-gray-600 leading-tight" style={{ fontSize: "1.4cqw" }}>
                           Recognition is optional. Impact is not.
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-[0.3cqw] p-[0.05cqw]">
+                    <div className="flex items-start gap-[0.15cqw]">
                       <svg
                         className="text-amber-500 shrink-0"
-                        style={{ width: "2.5cqw", height: "2.5cqw" }}
+                        style={{ width: "2cqw", height: "2cqw" }}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -1049,10 +1050,10 @@ export default function Home() {
                         />
                       </svg>
                       <div className="flex flex-col">
-                        <h4 className="font-extrabold leading-tight text-black" style={{ fontSize: "1.5cqw" }}>
+                        <h4 className="font-extrabold leading-tight text-black" style={{ fontSize: "1.7cqw" }}>
                           Legacy Without Fame
                         </h4>
-                        <p className="text-gray-600 leading-tight mt-[0.05cqw]" style={{ fontSize: "1.2cqw" }}>
+                        <p className="text-gray-600 leading-tight" style={{ fontSize: "1.4cqw" }}>
                           The impact lasts longer than the spotlight.
                         </p>
                       </div>
@@ -1705,10 +1706,15 @@ export default function Home() {
 
       <section
         id="collection"
-        className="flex flex-col min-h-screen w-full items-center justify-end bg-cover bg-center px-8 md:px-20 pb-8 md:pb-20"
-        style={{ backgroundImage: `url(${bgCollection.src})` }}
+        className="flex flex-col min-h-screen w-full items-center justify-end relative overflow-hidden px-8 md:px-20 pb-8 md:pb-20"
       >
-        <div className="flex flex-col items-center gap-8 w-full">
+        {/* Desktop background */}
+        <div className="hidden md:block absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${bgCollection.src})` }} />
+        {/* Mobile background */}
+        <div className="block md:hidden absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${collectionMobile.src})` }} />
+        {/* Dark gradient overlay for mobile — fades upward */}
+        <div className="block md:hidden absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+        <div className="relative z-10 flex flex-col items-center gap-8 w-full">
           <div className="flex flex-row items-center justify-center gap-8 md:justify-between md:gap-8 w-full">
             <img src={leftImage.src} alt="" className="w-3/5 md:w-[28%] h-auto" />
             <img
